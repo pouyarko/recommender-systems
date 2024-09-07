@@ -23,3 +23,40 @@ Such problems generally relate to recommender systems. The goal of these systems
 ### Output
 
 The expected output requires us to print 10 predictions for the next app to be installed by each of the one million users in the dataset. Each prediction should be printed with the corresponding uid in a row of a CSV file and uploaded to Quera. If the next installed app is one of the 10 predicted, the user is considered correctly predicted. The Quera judge will score us based on the percentage of all users we correctly predicted.
+
+###Steps
+
+You can find the code for our project in the `ipynb.send` file. Various Python libraries such as TensorFlow, Matplotlib, Numpy, and Pandas have been used. The goal of this project is to predict the apps installed by users. The step-by-step explanation of the code is as follows:
+
+1. **Importing Libraries:**
+   - `numpy` for numerical computations.
+   - `matplotlib` for plotting graphs.
+   - `tensorflow` and `keras` for building and training deep learning models.
+   - `pandas` for reading and processing data.
+   - `tqdm` for displaying progress bars.
+
+2. **Reading Data:**
+   - Data related to installed apps (`apps_installed.csv`) and related apps (`apps_related.csv`) are read from CSV files.
+
+3. **Initial Settings:**
+   - Various parameters such as the number of epochs, number of classes, and model storage path are set.
+
+4. **Data Processing:**
+   - The length of each row (number of apps installed by each user) is calculated and rows are grouped based on their length.
+   - A graph of the distribution of row lengths is plotted.
+
+5. **Defining the Model:**
+   - An LSTM model with three recurrent layers and three dense layers is built.
+   - The model is compiled using the `categorical_crossentropy` loss function and the Adam optimizer.
+
+6. **Generating Data:**
+   - Two functions, `size_by_numpy` and `size_by_numpy_test`, are defined to create training and test data based on row lengths.
+
+7. **Training the Model:**
+   - The model is trained for different data lengths and saved at each length.
+
+8. **Prediction and Evaluation:**
+   - Predictions are made for the test data and the results are reviewed to suggest new apps for each user.
+
+9. **Creating Output File:**
+   - The predicted data is saved in a CSV file named `result.csv`.
