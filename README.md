@@ -19,3 +19,7 @@ The data used in this project includes two files:
 ### Recommender Systems
 
 Such problems generally relate to recommender systems. The goal of these systems is to predict the user's next move based on their past behavior and provide optimal recommendations to capture more user attention. A similar example in Café Bazaar is akin to the challenges faced by online shopping sites, where new items are recommended to users based on their purchase or search history, increasing the likelihood of purchase and thereby enhancing profitability.
+
+### Output
+
+The expected output requires us to print 10 predictions for the next app to be installed by each of the one million users in the dataset. Each prediction should be printed with the corresponding uid in a row of a CSV file and uploaded to Quera. If the next installed app is one of the 10 predicted, the user is considered correctly predicted. The Quera judge will score us based on the percentage of all users we correctly predicted.
