@@ -26,7 +26,7 @@ The expected output requires us to print 10 predictions for the next app to be i
 
 ### Steps
 
-You can find the code for our project in the `ipynb.send` file. Various Python libraries such as TensorFlow, Matplotlib, Numpy, and Pandas have been used. The goal of this project is to predict the apps installed by users. The step-by-step explanation of the code is as follows:
+You can find the code for our project in the `code.ipynb` file. Various Python libraries such as TensorFlow, Matplotlib, Numpy, and Pandas have been used. The goal of this project is to predict the apps installed by users. The step-by-step explanation of the code is as follows:
 
 1. **Importing Libraries:**
    - `numpy` for numerical computations.
